@@ -13,10 +13,12 @@
 	
 	var changeStatus = function(jQ) {
 		var affectedElements = $(jQ).data('affected-elements');
-		if (!$(jQ).is(":checked")) {
-			$(affectedElements).attr("disabled" , true);
-		} else {
-			$(affectedElements).removeAttr("disabled");
+		if (affectedElements != '' && affectedElements != undefined) {
+			if (!$(jQ).is(":checked")) {
+				$(affectedElements).attr("disabled" , true);
+			} else {
+				$(affectedElements).removeAttr("disabled");
+			}
 		}
 	}
 
